@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Landing from './components/Landing'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Card from './components/Card';
 
-ReactDOM.render(<Landing />, document.getElementById('app'))
+ReactDOM.render(<Card />, document.getElementById('app'));
