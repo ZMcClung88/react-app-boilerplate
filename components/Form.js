@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from '../public/style.css';
 
 class Form extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class Form extends Component {
     return (
       <div>
         <form onSubmit={event => this.handleSubmit(event)}>
-          <div>
+          <div className="image-preview">
             {$imagePreview}
           </div>
           <input placeholder="Image" type="file" onChange={event => this.handleImageChange(event)} />

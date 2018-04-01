@@ -1,0 +1,6 @@
+.image-preview img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  /* border: 3px solid red; */
+}
