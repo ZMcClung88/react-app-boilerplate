@@ -1,10 +1,10 @@
 import React from 'react';
 
-class BioInfo extends React.Component {
+class ImageInfo extends React.Component {
   render() {
     return (
       <div>
-        <img />
+        <img alt="image goes here" />
         <h1>Name goes here</h1>
         <h5>Job Title Here</h5>
       </div>
@@ -12,4 +12,4 @@ class BioInfo extends React.Component {
   }
 }
 
-export default BioInfo;
+export default ImageInfo;
