@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 
 class Form extends Component {
   constructor(props) {
-    super(props) {
-      this.state = {
-        file: '',
-        imagePreviewUrl: ''
-      };
-    }
+    super(props);
+    this.state = {
+      file: '',
+      imagePreviewUrl: ''
+    };
   }
 
   handleSubmit(event) {
@@ -27,28 +26,36 @@ class Form extends Component {
         file: file,
         imagePreviewUrl: reader.result
       });
-    }
+    };
 
-    reader.readAsDaraURL(file)
+    reader.readAsDataURL(file);
   }
   render() {
-    let {imagePreviewUrl} = this.state;
+    let { imagePreviewUrl } = this.state;
     let $imagePreview = null;
-    if(imagePreviewUrl) {
-      $imagePreview = (<img src={imagePreviewUrl} />);
+    if (imagePreviewUrl) {
+      $imagePreview = <img src={imagePreviewUrl} />;
     } else {
-      $imagePreview = (<div className=''>Please select an Image for preview</div>)
+      $imagePreview = <div className="">Please select an Image for preview</div>;
     }
     return (
       <div>
-        <input placeholder="Image" type="file" />
-        <input placeholder="Name" />
-        <input placeholder="Occupation" />
-        <input placeholder="linkedin" />
-        <input placeholder="facebook" />
-        <input placeholder="twitter" />
-        <input placeholder="github" />
-        <input placeholder="instagram" />
+        <form onSubmit={event => this.handleSubmit(event)}>
+          <div>
+            {$imagePreview}
+          </div>
+          <input placeholder="Image" type="file" onChange={event => this.handleImageChange(event)} />
+          <button type="submit" onClick={event => this.handleSubmit(event)}>
+            Upload Image
+          </button>
+          <input placeholder="Name" />
+          <input placeholder="Occupation" />
+          <input placeholder="linkedin" />
+          <input placeholder="facebook" />
+          <input placeholder="twitter" />
+          <input placeholder="github" />
+          <input placeholder="instagram" />
+        </form>
       </div>
     );
   }
