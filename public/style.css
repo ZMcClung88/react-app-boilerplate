@@ -9,6 +9,8 @@
 .form {
   height: 70vh;
   width: 70%;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-preview {
@@ -33,15 +35,19 @@ input {
   border: 1px solid lightgrey;
 }
 
+.pic_search {
+  border: none;
+}
+
 .form_top {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .form_bottom {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,4 +61,13 @@ input {
 .social_media_links {
   display: flex;
   flex-direction: column;
+}
+
+.form_submit {
+  /* width: 20%; */
+  /* height: 5%; */
+  /* border: 1px solid red; */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }

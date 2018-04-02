@@ -47,7 +47,12 @@ class Form extends Component {
               <div className="image-preview">
                 {$imagePreview}
               </div>
-              <input placeholder="Image" type="file" onChange={event => this.handleImageChange(event)} />
+              <input
+                className="pic_search"
+                placeholder="Image"
+                type="file"
+                onChange={event => this.handleImageChange(event)}
+              />
               {/* <button type="submit" onClick={event => this.handleSubmit(event)}>
                 Upload Image
               </button> */}
@@ -66,6 +71,9 @@ class Form extends Component {
               <input placeholder="Github" />
               <input placeholder="Instagram" />
             </div>
+          </div>
+          <div className="form_submit">
+            <button>Submit</button>
           </div>
         </form>
       </div>
