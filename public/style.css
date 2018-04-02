@@ -1,6 +1,53 @@
+.form_wrapper {
+  border: 2px solid green;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  height: 70vh;
+  width: 70%;
+}
+
 .image-preview img {
   height: 250px;
   width: 250px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* border: 3px solid red; */
+}
+
+input {
+  height: 25px;
+  width: 250px;
+  margin: 10px;
+  padding-left: 5px;
+}
+
+.form_top {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_bottom {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.social_media_links {
+  display: flex;
+  flex-direction: column;
 }

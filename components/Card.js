@@ -7,7 +7,7 @@ class Card extends React.Component {
     return (
       <div className="landing-main">
         <Form />
-        <ImageInfo />
+        {/* <ImageInfo /> */}
       </div>
     );
   }

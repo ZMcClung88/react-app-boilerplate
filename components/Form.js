@@ -40,22 +40,33 @@ class Form extends Component {
       $imagePreview = <div className="">Please select an Image for preview</div>;
     }
     return (
-      <div>
-        <form onSubmit={event => this.handleSubmit(event)}>
-          <div className="image-preview">
-            {$imagePreview}
+      <div className="form_wrapper">
+        <form onSubmit={event => this.handleSubmit(event)} className="form">
+          <div className="form_top">
+            <div className="image_select">
+              <div className="image-preview">
+                {$imagePreview}
+              </div>
+              <input placeholder="Image" type="file" onChange={event => this.handleImageChange(event)} />
+              <button type="submit" onClick={event => this.handleSubmit(event)}>
+                Upload Image
+              </button>
+            </div>
           </div>
-          <input placeholder="Image" type="file" onChange={event => this.handleImageChange(event)} />
-          <button type="submit" onClick={event => this.handleSubmit(event)}>
-            Upload Image
-          </button>
-          <input placeholder="Name" />
-          <input placeholder="Occupation" />
-          <input placeholder="linkedin" />
-          <input placeholder="facebook" />
-          <input placeholder="twitter" />
-          <input placeholder="github" />
-          <input placeholder="instagram" />
+          <div className="form_bottom">
+            <div className="personal_info">
+              <input placeholder="Name" />
+              <input placeholder="Occupation" />
+              <input placeholder="Email" />
+            </div>
+            <div className="social_media_links">
+              <input placeholder="linkedin" />
+              <input placeholder="facebook" />
+              <input placeholder="twitter" />
+              <input placeholder="github" />
+              <input placeholder="instagram" />
+            </div>
+          </div>
         </form>
       </div>
     );
