@@ -48,9 +48,9 @@ class Form extends Component {
                 {$imagePreview}
               </div>
               <input placeholder="Image" type="file" onChange={event => this.handleImageChange(event)} />
-              <button type="submit" onClick={event => this.handleSubmit(event)}>
+              {/* <button type="submit" onClick={event => this.handleSubmit(event)}>
                 Upload Image
-              </button>
+              </button> */}
             </div>
           </div>
           <div className="form_bottom">
@@ -60,11 +60,11 @@ class Form extends Component {
               <input placeholder="Email" />
             </div>
             <div className="social_media_links">
-              <input placeholder="linkedin" />
-              <input placeholder="facebook" />
-              <input placeholder="twitter" />
-              <input placeholder="github" />
-              <input placeholder="instagram" />
+              <input placeholder="Linkedin" />
+              <input placeholder="Facebook" />
+              <input placeholder="Twitter" />
+              <input placeholder="Github" />
+              <input placeholder="Instagram" />
             </div>
           </div>
         </form>
