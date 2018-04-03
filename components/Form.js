@@ -20,6 +20,11 @@ class Form extends Component {
     this.handleName = this.handleName.bind(this);
     this.handleOccupation = this.handleOccupation.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
+    this.handleLinkedin = this.handleLinkedin.bind(this);
+    this.handleFacebook = this.handleFacebook.bind(this);
+    this.handleTwitter = this.handleTwitter.bind(this);
+    this.handleGithub = this.handleGithub.bind(this);
+    this.handleInstagram = this.handleInstagram.bind(this);
   }
 
   handleSubmit(event) {
@@ -59,6 +64,36 @@ class Form extends Component {
   handleEmail(event) {
     let value = event.target.value;
     this.setState({ email: value });
+    console.log(this.state);
+  }
+
+  handleLinkedin(event) {
+    let value = event.target.value;
+    this.setState({ linkedin: value });
+    console.log(this.state);
+  }
+
+  handleFacebook(event) {
+    let value = event.target.value;
+    this.setState({ facebook: value });
+    console.log(this.state);
+  }
+
+  handleTwitter(event) {
+    let value = event.target.value;
+    this.setState({ twitter: value });
+    console.log(this.state);
+  }
+
+  handleGithub(event) {
+    let value = event.target.value;
+    this.setState({ github: value });
+    console.log(this.state);
+  }
+
+  handleInstagram(event) {
+    let value = event.target.value;
+    this.setState({ instagram: value });
     console.log(this.state);
   }
 
@@ -109,11 +144,11 @@ class Form extends Component {
               <input onChange={this.handleEmail} value={this.state.email} type="text" placeholder="Email" />
             </div>
             <div className="social_media_links">
-              <input onChange={this.handleChange} type="text" placeholder="Linkedin" />
-              <input onChange={this.handleChange} type="text" placeholder="Facebook" />
-              <input onChange={this.handleChange} type="text" placeholder="Twitter" />
-              <input onChange={this.handleChange} type="text" placeholder="Github" />
-              <input onChange={this.handleChange} type="text" placeholder="Instagram" />
+              <input onChange={this.handleLinkedin} type="text" placeholder="Linkedin" />
+              <input onChange={this.handleFacebook} type="text" placeholder="Facebook" />
+              <input onChange={this.handleTwitter} type="text" placeholder="Twitter" />
+              <input onChange={this.handleGithub} type="text" placeholder="Github" />
+              <input onChange={this.handleInstagram} type="text" placeholder="Instagram" />
             </div>
           </div>
           <div className="form_submit">
