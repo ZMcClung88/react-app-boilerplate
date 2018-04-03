@@ -6,8 +6,20 @@ class Form extends Component {
     super(props);
     this.state = {
       file: '',
-      imagePreviewUrl: ''
+      imagePreviewUrl: '',
+      name: '',
+      occupation: '',
+      email: '',
+      linkedin: '',
+      facebook: '',
+      twitter: '',
+      github: '',
+      instagram: ''
     };
+
+    this.handleName = this.handleName.bind(this);
+    this.handleOccupation = this.handleOccupation.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
   }
 
   handleSubmit(event) {
@@ -31,6 +43,32 @@ class Form extends Component {
 
     reader.readAsDataURL(file);
   }
+
+  handleName(event) {
+    let value = event.target.value;
+    this.setState({ name: value });
+    console.log(this.state);
+  }
+
+  handleOccupation(event) {
+    let value = event.target.value;
+    this.setState({ occupation: value });
+    console.log(this.state);
+  }
+
+  handleEmail(event) {
+    let value = event.target.value;
+    this.setState({ email: value });
+    console.log(this.state);
+  }
+
+  handleSubmit(event) {
+    console.log(event);
+  }
+
+  handleClick(event) {
+    console.log(event);
+  }
   render() {
     let { imagePreviewUrl } = this.state;
     let $imagePreview = null;
@@ -41,13 +79,14 @@ class Form extends Component {
     }
     return (
       <div className="form_wrapper">
-        <form onSubmit={event => this.handleSubmit(event)} className="form">
+        <form onSubmit={this.handleSubmit} className="form">
           <div className="form_top">
             <div className="image_select">
               <div className="image-preview">
                 {$imagePreview}
               </div>
               <input
+                onChange={this.handleChange}
                 className="pic_search"
                 placeholder="Image"
                 type="file"
@@ -60,16 +99,21 @@ class Form extends Component {
           </div>
           <div className="form_bottom">
             <div className="personal_info">
-              <input placeholder="Name" />
-              <input placeholder="Occupation" />
-              <input placeholder="Email" />
+              <input onChange={this.handleName} value={this.state.name} type="text" placeholder="Name" />
+              <input
+                onChange={this.handleOccupation}
+                value={this.state.occupation}
+                type="text"
+                placeholder="Occupation"
+              />
+              <input onChange={this.handleEmail} value={this.state.email} type="text" placeholder="Email" />
             </div>
             <div className="social_media_links">
-              <input placeholder="Linkedin" />
-              <input placeholder="Facebook" />
-              <input placeholder="Twitter" />
-              <input placeholder="Github" />
-              <input placeholder="Instagram" />
+              <input onChange={this.handleChange} type="text" placeholder="Linkedin" />
+              <input onChange={this.handleChange} type="text" placeholder="Facebook" />
+              <input onChange={this.handleChange} type="text" placeholder="Twitter" />
+              <input onChange={this.handleChange} type="text" placeholder="Github" />
+              <input onChange={this.handleChange} type="text" placeholder="Instagram" />
             </div>
           </div>
           <div className="form_submit">
