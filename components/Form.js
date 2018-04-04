@@ -151,9 +151,9 @@ class Form extends Component {
               <input onChange={this.handleInstagram} type="text" placeholder="Instagram" />
             </div>
           </div>
-          <div className="form_submit">
+          {/* <div className="form_submit">
             <button type="submit">Submit</button>
-          </div>
+          </div> */}
         </form>
       </div>
     );
