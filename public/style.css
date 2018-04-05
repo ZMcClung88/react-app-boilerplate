@@ -67,6 +67,16 @@ input {
   align-items: center;
 }
 
+.form_bottom button {
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
+  background: #f4f4f4;
+  cursor: pointer;
+  font-family: tahoma;
+  font-size: 18px;
+}
+
 .personal_info_links {
   display: flex;
   flex-direction: row;
