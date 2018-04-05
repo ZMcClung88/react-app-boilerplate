@@ -113,7 +113,11 @@ class Form extends Component {
     if (imagePreviewUrl) {
       $imagePreview = <img src={imagePreviewUrl} />;
     } else {
-      $imagePreview = <div className="">Please select an Image for preview</div>;
+      $imagePreview = (
+        <div className="default_profile">
+          <img src="/images/default_profile.jpeg" />
+        </div>
+      );
     }
     return (
       <div className="form_wrapper">
