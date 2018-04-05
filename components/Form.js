@@ -25,6 +25,7 @@ class Form extends Component {
     this.handleTwitter = this.handleTwitter.bind(this);
     this.handleGithub = this.handleGithub.bind(this);
     this.handleInstagram = this.handleInstagram.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleSubmit(event) {
@@ -102,7 +103,9 @@ class Form extends Component {
   }
 
   handleClick(event) {
-    console.log(event);
+    event.preventDefault();
+
+    this.props.onClick(this.state);
   }
   render() {
     let { imagePreviewUrl } = this.state;
@@ -151,9 +154,11 @@ class Form extends Component {
               <input onChange={this.handleInstagram} type="text" placeholder="Instagram" />
             </div>
           </div>
-          {/* <div className="form_submit">
-            <button type="submit">Submit</button>
-          </div> */}
+          <div className="form_submit">
+            <button type="text" onClick={this.handleClick}>
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     );
