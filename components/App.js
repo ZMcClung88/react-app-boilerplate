@@ -49,9 +49,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="landing-main">
-        <Form onClick={this.handleClick} />
+        {/* <Form onClick={this.handleClick} />
         <button onClick={this.handleClick2}>State</button>
-        <Card formData={this.state} />
+        <Card formData={this.state} /> */}
+        {this.state.name === '' ? <Form onClick={this.handleClick} /> : <Card formData={this.state} />}
       </div>
     );
   }

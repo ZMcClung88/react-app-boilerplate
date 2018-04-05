@@ -94,3 +94,59 @@ input {
   justify-content: space-around;
   align-items: center;
 }
+
+/*  CARD COMPONENT  */
+.card_wrapper {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.display {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background: lightgrey;
+  display: flex;
+  width: 50%;
+  height: 50%;
+  padding: 25px;
+}
+
+.display_left {
+  /* border: 2px solid blue; */
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 45%;
+  height: 80%;
+  padding-top: 40px;
+}
+
+.display_left img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.display_left h1 {
+  /* margin-bottom: -2px; */
+}
+
+.display_left p {
+  margin-top: -5px;
+}
+
+.display_right {
+  /* border: 2px solid orange; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  font-size: 18px;
+  /* text-transform: uppercase; */
+}
