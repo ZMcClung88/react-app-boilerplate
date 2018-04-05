@@ -53,49 +53,49 @@ class Form extends Component {
   handleName(event) {
     let value = event.target.value;
     this.setState({ name: value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleOccupation(event) {
     let value = event.target.value;
     this.setState({ occupation: value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleEmail(event) {
     let value = event.target.value;
     this.setState({ email: value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleLinkedin(event) {
     let value = event.target.value;
     this.setState({ linkedin: value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleFacebook(event) {
     let value = event.target.value;
     this.setState({ facebook: value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleTwitter(event) {
     let value = event.target.value;
     this.setState({ twitter: value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleGithub(event) {
     let value = event.target.value;
     this.setState({ github: value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleInstagram(event) {
     let value = event.target.value;
     this.setState({ instagram: value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleSubmit(event) {
@@ -119,42 +119,42 @@ class Form extends Component {
       <div className="form_wrapper">
         <form onSubmit={this.handleSubmit} className="form">
           <div className="form_top">
-            <div className="image_select">
-              <div className="image-preview">
-                {$imagePreview}
+            <div className="form_submit">
+              <div className="image_select">
+                <div className="image-preview">
+                  {$imagePreview}
+                </div>
+                <input
+                  onChange={this.handleChange}
+                  className="pic_search"
+                  placeholder="Image"
+                  type="file"
+                  onChange={event => this.handleImageChange(event)}
+                />
+                {/* <button type="submit" onClick={event => this.handleSubmit(event)}>
+                  Upload Image
+                </button> */}
               </div>
-              <input
-                onChange={this.handleChange}
-                className="pic_search"
-                placeholder="Image"
-                type="file"
-                onChange={event => this.handleImageChange(event)}
-              />
-              {/* <button type="submit" onClick={event => this.handleSubmit(event)}>
-                Upload Image
-              </button> */}
+              <div className="personal_info">
+                <input onChange={this.handleName} value={this.state.name} type="text" placeholder="Name" />
+                <input
+                  onChange={this.handleOccupation}
+                  value={this.state.occupation}
+                  type="text"
+                  placeholder="Occupation"
+                />
+                <input onChange={this.handleEmail} value={this.state.email} type="text" placeholder="Email" />
+              </div>
+              <div className="social_media_links">
+                <input onChange={this.handleLinkedin} type="text" placeholder="Linkedin" />
+                <input onChange={this.handleFacebook} type="text" placeholder="Facebook" />
+                <input onChange={this.handleTwitter} type="text" placeholder="Twitter" />
+                <input onChange={this.handleGithub} type="text" placeholder="Github" />
+                <input onChange={this.handleInstagram} type="text" placeholder="Instagram" />
+              </div>
             </div>
           </div>
           <div className="form_bottom">
-            <div className="personal_info">
-              <input onChange={this.handleName} value={this.state.name} type="text" placeholder="Name" />
-              <input
-                onChange={this.handleOccupation}
-                value={this.state.occupation}
-                type="text"
-                placeholder="Occupation"
-              />
-              <input onChange={this.handleEmail} value={this.state.email} type="text" placeholder="Email" />
-            </div>
-            <div className="social_media_links">
-              <input onChange={this.handleLinkedin} type="text" placeholder="Linkedin" />
-              <input onChange={this.handleFacebook} type="text" placeholder="Facebook" />
-              <input onChange={this.handleTwitter} type="text" placeholder="Twitter" />
-              <input onChange={this.handleGithub} type="text" placeholder="Github" />
-              <input onChange={this.handleInstagram} type="text" placeholder="Instagram" />
-            </div>
-          </div>
-          <div className="form_submit">
             <button type="text" onClick={this.handleClick}>
               Submit
             </button>
