@@ -135,22 +135,19 @@ class Form extends Component {
                   Upload Image
                 </button> */}
               </div>
-              <div className="personal_info">
-                <input onChange={this.handleName} value={this.state.name} type="text" placeholder="Name" />
-                <input
-                  onChange={this.handleOccupation}
-                  value={this.state.occupation}
-                  type="text"
-                  placeholder="Occupation"
-                />
-                <input onChange={this.handleEmail} value={this.state.email} type="text" placeholder="Email" />
-              </div>
-              <div className="social_media_links">
-                <input onChange={this.handleLinkedin} type="text" placeholder="Linkedin" />
-                <input onChange={this.handleFacebook} type="text" placeholder="Facebook" />
-                <input onChange={this.handleTwitter} type="text" placeholder="Twitter" />
-                <input onChange={this.handleGithub} type="text" placeholder="Github" />
-                <input onChange={this.handleInstagram} type="text" placeholder="Instagram" />
+              <div className="personal_info_links">
+                <div className="links_left">
+                  <input onChange={this.handleName} type="text" placeholder="Name" />
+                  <input onChange={this.handleOccupation} type="text" placeholder="Occupation" />
+                  <input onChange={this.handleEmail} type="text" placeholder="Email" />
+                  <input onChange={this.handleLinkedin} type="text" placeholder="Linkedin" />
+                </div>
+                <div className="links_right">
+                  <input onChange={this.handleFacebook} type="text" placeholder="Facebook" />
+                  <input onChange={this.handleTwitter} type="text" placeholder="Twitter" />
+                  <input onChange={this.handleGithub} type="text" placeholder="Github" />
+                  <input onChange={this.handleInstagram} type="text" placeholder="Instagram" />
+                </div>
               </div>
             </div>
           </div>
