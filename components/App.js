@@ -7,23 +7,24 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      file: '',
-      imagePreviewUrl: '',
-      name: '',
-      occupation: '',
-      email: '',
-      linkedin: '',
-      facebook: '',
-      twitter: '',
-      github: '',
-      instagram: ''
+      file: null,
+      imagePreviewUrl: null,
+      name: null,
+      occupation: null,
+      email: null,
+      linkedin: null,
+      facebook: null,
+      twitter: null,
+      github: null,
+      instagram: null,
+      links: []
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleClick2 = this.handleClick2.bind(this);
   }
 
   handleClick(obj) {
-    console.log(obj.name + ' this is in the parent!!!');
+    console.log(obj + ' this is in the parent!!!');
     this.setState(
       {
         imagePreviewUrl: obj.imagePreviewUrl,
@@ -34,10 +35,11 @@ class App extends React.Component {
         facebook: obj.facebook,
         twitter: obj.twitter,
         github: obj.github,
-        instagram: obj.instagram
+        instagram: obj.instagram,
+        links: obj.links.concat(obj.linkedin, obj.facebook, obj.twitter, obj.github, obj.instagram)
       },
       function() {
-        console.log('attempt2', this.state.name);
+        console.log('attempt2', this.state);
       }
     );
   }
@@ -52,7 +54,7 @@ class App extends React.Component {
         {/* <Form onClick={this.handleClick} />
         <button onClick={this.handleClick2}>State</button>
         <Card formData={this.state} /> */}
-        {this.state.name === '' ? <Form onClick={this.handleClick} /> : <Card formData={this.state} />}
+        {this.state.name === null ? <Form onClick={this.handleClick} /> : <Card formData={this.state} />}
       </div>
     );
   }

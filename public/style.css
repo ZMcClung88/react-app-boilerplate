@@ -123,7 +123,11 @@ input {
   align-items: center;
   width: 45%;
   height: 80%;
-  padding-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* background: navy; */
 }
 
 .display_left img {
@@ -149,4 +153,14 @@ input {
   width: 55%;
   font-size: 18px;
   /* text-transform: uppercase; */
+}
+
+.display_right li {
+  list-style-type: none;
+}
+
+.display_right a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
 }

@@ -17,25 +17,49 @@ class Card extends Component {
               {this.props.formData.occupation}
             </p>
             <p>
-              {this.props.formData.email}
+              <a href={this.props.formData.email}>
+                {this.props.formData.email}
+              </a>
             </p>
           </div>
           <div className="display_right">
-            <p>
-              {this.props.formData.linkedin}
+            {/* <p>
+              <a href={this.props.formData.linkedin}>
+                {this.props.formData.linkedin}
+              </a>
             </p>
             <p>
-              {this.props.formData.facebook}
+              <a href={this.props.formData.facebook}>
+                {this.props.formData.facebook}
+              </a>
             </p>
             <p>
-              {this.props.formData.twitter}
+              <a href={this.props.formData.twitter}>
+                {this.props.formData.twitter}
+              </a>
             </p>
             <p>
-              {this.props.formData.github}
+              <a href={this.props.formData.github}>
+                {this.props.formData.github}
+              </a>
             </p>
             <p>
-              {this.props.formData.instagram}
-            </p>
+              <a href={this.props.formData.instagram}>
+                {this.props.formData.instagram}
+              </a>
+            </p> */}
+            <ul>
+              {this.props.formData.links.map(
+                link =>
+                  link === null
+                    ? null
+                    : <li key={link}>
+                        <a href={link}>
+                          {link}
+                        </a>
+                      </li>
+              )}
+            </ul>
           </div>
         </div>
       </div>

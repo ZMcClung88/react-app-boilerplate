@@ -5,16 +5,17 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      file: '',
-      imagePreviewUrl: '',
-      name: '',
-      occupation: '',
-      email: '',
-      linkedin: '',
-      facebook: '',
-      twitter: '',
-      github: '',
-      instagram: ''
+      file: null,
+      imagePreviewUrl: null,
+      name: null,
+      occupation: null,
+      email: null,
+      linkedin: null,
+      facebook: null,
+      twitter: null,
+      github: null,
+      instagram: null,
+      links: []
     };
 
     this.handleName = this.handleName.bind(this);
