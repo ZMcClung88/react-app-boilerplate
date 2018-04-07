@@ -164,3 +164,7 @@ input {
   list-style-type: none;
   color: black;
 }
+
+.display_right a:hover {
+  text-decoration: underline;
+}

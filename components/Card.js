@@ -17,9 +17,7 @@ class Card extends Component {
               {this.props.formData.occupation}
             </p>
             <p>
-              <a href={this.props.formData.email}>
-                {this.props.formData.email}
-              </a>
+              {this.props.formData.email}
             </p>
           </div>
           <div className="display_right">

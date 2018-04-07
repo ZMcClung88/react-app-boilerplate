@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   handleClick(obj) {
-    console.log(obj + ' this is in the parent!!!');
+    console.log(obj.name + ' this is in the parent!!!');
     this.setState(
       {
         imagePreviewUrl: obj.imagePreviewUrl,
@@ -45,7 +45,15 @@ class App extends React.Component {
   }
 
   handleClick2() {
-    console.log(this.state);
+    let name = localStorage.getItem('name').replace(/\"/g, '');
+    let occupation = localStorage.getItem('occupation').replace(/\"/g, '');
+    let email = localStorage.getItem('email').replace(/\"/g, '');
+
+    this.setState({
+      name: name,
+      occupation: occupation + '123',
+      email: email + '123'
+    });
   }
 
   render() {
@@ -54,7 +62,7 @@ class App extends React.Component {
         {/* <Form onClick={this.handleClick} />
         <button onClick={this.handleClick2}>State</button>
         <Card formData={this.state} /> */}
-        {this.state.name === null ? <Form onClick={this.handleClick} /> : <Card formData={this.state} />}
+        {this.state.name === null ? <Form onClick={this.handleClick2} /> : <Card formData={this.state} />}
       </div>
     );
   }

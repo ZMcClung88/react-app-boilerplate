@@ -27,6 +27,8 @@ class Form extends Component {
     this.handleGithub = this.handleGithub.bind(this);
     this.handleInstagram = this.handleInstagram.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    // this.componentDidUpdate = this.componentDidUpdate.bind(this);
+    this.componentWillUpdate = this.componentWillUpdate.bind(this);
   }
 
   handleSubmit(event) {
@@ -108,6 +110,20 @@ class Form extends Component {
 
     this.props.onClick(this.state);
   }
+
+  componentWillMount() {
+    localStorage.getItem('name') &&
+      this.setState({
+        name: name
+      });
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem('name', JSON.stringify(nextState.name));
+    localStorage.setItem('occupation', JSON.stringify(nextState.occupation));
+    localStorage.setItem('email', JSON.stringify(nextState.email));
+  }
+
   render() {
     let { imagePreviewUrl } = this.state;
     let $imagePreview = null;
