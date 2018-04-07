@@ -120,8 +120,6 @@ class Form extends Component {
 
   componentWillUpdate(nextProps, nextState) {
     localStorage.setItem('name', JSON.stringify(nextState.name));
-    localStorage.setItem('occupation', JSON.stringify(nextState.occupation));
-    localStorage.setItem('email', JSON.stringify(nextState.email));
   }
 
   render() {

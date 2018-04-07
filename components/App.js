@@ -35,8 +35,7 @@ class App extends React.Component {
         facebook: obj.facebook,
         twitter: obj.twitter,
         github: obj.github,
-        instagram: obj.instagram,
-        links: obj.links.concat(obj.linkedin, obj.facebook, obj.twitter, obj.github, obj.instagram)
+        instagram: obj.instagram
       },
       function() {
         console.log('attempt2', this.state);
@@ -45,14 +44,26 @@ class App extends React.Component {
   }
 
   handleClick2() {
+    let imagePreviewUrl = localStorage.getItem('imagePreviewUrl').replace(/\"/g, '');
     let name = localStorage.getItem('name').replace(/\"/g, '');
     let occupation = localStorage.getItem('occupation').replace(/\"/g, '');
     let email = localStorage.getItem('email').replace(/\"/g, '');
+    let linkedin = localStorage.getItem('linkedin').replace(/\"/g, '');
+    let facebook = localStorage.getItem('facebook').replace(/\"/g, '');
+    let twitter = localStorage.getItem('twitter').replace(/\"/g, '');
+    let github = localStorage.getItem('github').replace(/\"/g, '');
+    let instagram = localStorage.getItem('instagram').replace(/\"/g, '');
 
     this.setState({
+      imagePreviewUrl: imagePreviewUrl,
       name: name,
       occupation: occupation + '123',
-      email: email + '123'
+      email: email + '123',
+      linkedin: linkedin,
+      facebook: facebook,
+      twitter: twitter,
+      github: github,
+      instagram: instagram
     });
   }
 
