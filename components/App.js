@@ -35,7 +35,8 @@ class App extends React.Component {
         facebook: obj.facebook,
         twitter: obj.twitter,
         github: obj.github,
-        instagram: obj.instagram
+        instagram: obj.instagram,
+        links: obj.links.concat(obj.linkedin, obj.facebook, obj.twitter, obj.github, obj.instagram)
       },
       function() {
         console.log('attempt2', this.state);
@@ -73,7 +74,7 @@ class App extends React.Component {
         {/* <Form onClick={this.handleClick} />
         <button onClick={this.handleClick2}>State</button>
         <Card formData={this.state} /> */}
-        {this.state.name === null ? <Form onClick={this.handleClick2} /> : <Card formData={this.state} />}
+        {this.state.name === null ? <Form onClick={this.handleClick} /> : <Card formData={this.state} />}
       </div>
     );
   }

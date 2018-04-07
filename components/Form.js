@@ -28,7 +28,7 @@ class Form extends Component {
     this.handleInstagram = this.handleInstagram.bind(this);
     this.handleClick = this.handleClick.bind(this);
     // this.componentDidUpdate = this.componentDidUpdate.bind(this);
-    this.componentWillUpdate = this.componentWillUpdate.bind(this);
+    // this.componentWillUpdate = this.componentWillUpdate.bind(this);
   }
 
   handleSubmit(event) {
@@ -111,16 +111,16 @@ class Form extends Component {
     this.props.onClick(this.state);
   }
 
-  componentWillMount() {
-    localStorage.getItem('name') &&
-      this.setState({
-        name: name
-      });
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem('name', JSON.stringify(nextState.name));
-  }
+  // componentWillMount() {
+  //   localStorage.getItem('name') &&
+  //     this.setState({
+  //       name: name
+  //     });
+  // }
+  //
+  // componentWillUpdate(nextProps, nextState) {
+  //   localStorage.setItem('name', JSON.stringify(nextState.name));
+  // }
 
   render() {
     let { imagePreviewUrl } = this.state;
