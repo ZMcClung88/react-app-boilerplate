@@ -37,10 +37,10 @@ class App extends React.Component {
         github: obj.github,
         instagram: obj.instagram,
         links: obj.links.concat(obj.linkedin, obj.facebook, obj.twitter, obj.github, obj.instagram)
-      },
-      function() {
-        console.log('attempt2', this.state);
       }
+      // function() {
+      //   console.log('attempt2', this.state);
+      // }
     );
   }
 
