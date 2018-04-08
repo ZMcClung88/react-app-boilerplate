@@ -45,26 +45,26 @@ class App extends React.Component {
   }
 
   handleClick2() {
-    let imagePreviewUrl = localStorage.getItem('imagePreviewUrl').replace(/\"/g, '');
+    // let imagePreviewUrl = localStorage.getItem('imagePreviewUrl').replace(/\"/g, '');
     let name = localStorage.getItem('name').replace(/\"/g, '');
     let occupation = localStorage.getItem('occupation').replace(/\"/g, '');
     let email = localStorage.getItem('email').replace(/\"/g, '');
-    let linkedin = localStorage.getItem('linkedin').replace(/\"/g, '');
-    let facebook = localStorage.getItem('facebook').replace(/\"/g, '');
-    let twitter = localStorage.getItem('twitter').replace(/\"/g, '');
-    let github = localStorage.getItem('github').replace(/\"/g, '');
-    let instagram = localStorage.getItem('instagram').replace(/\"/g, '');
+    // let linkedin = localStorage.getItem('linkedin').replace(/\"/g, '');
+    // let facebook = localStorage.getItem('facebook').replace(/\"/g, '');
+    // let twitter = localStorage.getItem('twitter').replace(/\"/g, '');
+    // let github = localStorage.getItem('github').replace(/\"/g, '');
+    // let instagram = localStorage.getItem('instagram').replace(/\"/g, '');
 
     this.setState({
-      imagePreviewUrl: imagePreviewUrl,
+      // imagePreviewUrl: imagePreviewUrl,
       name: name,
       occupation: occupation + '123',
-      email: email + '123',
-      linkedin: linkedin,
-      facebook: facebook,
-      twitter: twitter,
-      github: github,
-      instagram: instagram
+      email: email + '123'
+      // linkedin: linkedin,
+      // facebook: facebook,
+      // twitter: twitter,
+      // github: github,
+      // instagram: instagram
     });
   }
 
@@ -74,7 +74,7 @@ class App extends React.Component {
         {/* <Form onClick={this.handleClick} />
         <button onClick={this.handleClick2}>State</button>
         <Card formData={this.state} /> */}
-        {this.state.name === null ? <Form onClick={this.handleClick} /> : <Card formData={this.state} />}
+        {this.state.name === null ? <Form onClick={this.handleClick2} /> : <Card formData={this.state} />}
       </div>
     );
   }

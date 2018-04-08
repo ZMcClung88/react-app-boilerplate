@@ -111,16 +111,28 @@ class Form extends Component {
     this.props.onClick(this.state);
   }
 
-  // componentWillMount() {
-  //   localStorage.getItem('name') &&
-  //     this.setState({
-  //       name: name
-  //     });
-  // }
-  //
-  // componentWillUpdate(nextProps, nextState) {
-  //   localStorage.setItem('name', JSON.stringify(nextState.name));
-  // }
+  componentWillMount() {
+    localStorage.getItem('name') &&
+      this.setState({
+        name: name
+      });
+
+    // localStorage.getItem('occupation') &&
+    //   this.setState({
+    //     occupation: occupation
+    //   });
+    //
+    // localStorage.getItem('email') &&
+    //   this.setState({
+    //     email: email
+    //   });
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem('name', JSON.stringify(nextState.name));
+    // localStorage.setItem('occupation', JSON.stringify(nextState.occupation));
+    // localStorage.setItem('email', JSON.stringify(nextState.email));
+  }
 
   render() {
     let { imagePreviewUrl } = this.state;
